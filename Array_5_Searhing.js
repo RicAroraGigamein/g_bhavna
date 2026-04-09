@@ -40,10 +40,30 @@ function linearSearchAll(arr, target) {
 }
 
 // Test
-let arr2 = [10, 20, 30, 20, 40, 20];
-console.log("Linear Search All:",
-  linearSearchAll(arr2, 20)); // [1, 3, 5]
+// let arr2 = [10, 20, 30, 20, 40, 20];
+// console.log("Linear Search All:",
+//   linearSearchAll(arr2, 20)); // [1, 3, 5]
 
+
+
+//   function linearSearch(arr, index, target) {
+//     // Base case
+//     if (index === arr.length) {
+//         return -1;
+//     }
+
+//     // If found
+//     if (arr[index] === target) {
+//         return index;
+//     }
+
+//     // Recursive call
+//     return linearSearch(arr, index + 1, target);
+// }
+
+// // Example
+// const arr1 = [4, 2, 7, 1, 9];
+// console.log(linearSearch(arr, 0, 7)); // Output: 2
 
 
 // ------------------------------------------
@@ -75,6 +95,26 @@ let arr3 = [10, 20, 30, 40, 50,60,70,80,90];
 console.log("Binary Search Index:",
   binarySearch(arr3, 90)); // 3
 
+
+  // recursion
+  function linearSearch(arr, index, target) {
+    // Base case
+    if (index === arr.length) {
+        return -1;
+    }
+
+    // If found
+    if (arr[index] === target) {
+        return index;
+    }
+
+    // Recursive call
+    return linearSearch(arr, index + 1, target);
+}
+
+// Example
+const arr = [4, 2, 7, 1, 9];
+console.log(linearSearch(arr, 0, 7)); // Output: 2
 
 
 // ------------------------------------------
@@ -108,12 +148,12 @@ console.log("Binary Search Recursive Index:",
 LINEAR SEARCH:
 ✔ Works on unsorted data
 ✔ Simple & safe
-❌ Slow for large arrays
+ Slow for large arrays
 
 BINARY SEARCH:
 ✔ Very fast
-❌ Requires sorted array
-❌ Random access required
+ Requires sorted array
+ Random access required
 
 Use Linear → small/unsorted data
 Use Binary → large/sorted data
